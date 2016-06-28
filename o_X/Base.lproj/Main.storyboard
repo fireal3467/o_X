@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Board View Controller-->
         <scene sceneID="4I2-00-sYN">
             <objects>
-                <viewController id="LJV-Ur-xoy" sceneMemberID="viewController">
+                <viewController id="LJV-Ur-xoy" customClass="BoardViewController" customModule="o_X" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WRw-QQ-x7f"/>
                         <viewControllerLayoutGuide type="bottom" id="M50-Co-RIc"/>
@@ -59,6 +59,9 @@
                                             <constraint firstAttribute="width" constant="90" id="DnR-RS-iY1"/>
                                             <constraint firstAttribute="height" constant="90" id="JlF-Lq-95u"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="EIZ-wt-ejz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VB8-I7-RmC" userLabel="Button2">
                                         <rect key="frame" x="162" y="163" width="90" height="90"/>
@@ -67,6 +70,9 @@
                                             <constraint firstAttribute="width" constant="90" id="1jA-xA-U3a"/>
                                             <constraint firstAttribute="height" constant="90" id="QoQ-4c-e1h"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="hla-y0-0JK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QnH-AT-9XT" userLabel="Button3">
                                         <rect key="frame" x="262" y="163" width="90" height="90"/>
@@ -75,6 +81,9 @@
                                             <constraint firstAttribute="height" constant="90" id="Kq0-0b-2Yi"/>
                                             <constraint firstAttribute="width" constant="90" id="bDj-A8-L5B"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="HBZ-cR-M3K"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mR3-Oz-QMy" userLabel="Button4">
                                         <rect key="frame" x="62" y="263" width="90" height="90"/>
@@ -83,6 +92,9 @@
                                             <constraint firstAttribute="height" constant="90" id="ASO-ZU-hXH"/>
                                             <constraint firstAttribute="width" constant="90" id="Ueb-4N-xLa"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="g3M-1W-8Fo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B27-T3-YPq" userLabel="Button5">
                                         <rect key="frame" x="162" y="263" width="90" height="90"/>
@@ -91,6 +103,9 @@
                                             <constraint firstAttribute="width" constant="90" id="fIx-fK-UD3"/>
                                             <constraint firstAttribute="height" constant="90" id="ztn-5X-eoD"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="LrS-n5-LfA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEd-uY-aGz" userLabel="Button6">
                                         <rect key="frame" x="262" y="263" width="90" height="90"/>
@@ -99,6 +114,9 @@
                                             <constraint firstAttribute="height" constant="90" id="BbN-fq-Jgx"/>
                                             <constraint firstAttribute="width" constant="90" id="SJt-yg-VwE"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="juh-7I-OhC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbK-31-icW" userLabel="Button7">
                                         <rect key="frame" x="62" y="363" width="90" height="90"/>
@@ -107,6 +125,9 @@
                                             <constraint firstAttribute="height" constant="90" id="XeC-fp-nFN"/>
                                             <constraint firstAttribute="width" constant="90" id="Yu0-eW-Wrf"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="Pmq-ZX-zUp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCK-ip-GYh" userLabel="Button8">
                                         <rect key="frame" x="162" y="363" width="90" height="90"/>
@@ -115,6 +136,9 @@
                                             <constraint firstAttribute="height" constant="90" id="dcO-Fz-l9q"/>
                                             <constraint firstAttribute="width" constant="90" id="qf3-yh-hmP"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="3yW-xG-tod"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htk-ah-w38" userLabel="Button9">
                                         <rect key="frame" x="262" y="363" width="90" height="90"/>
@@ -123,6 +147,9 @@
                                             <constraint firstAttribute="height" constant="90" id="Cmb-Fo-M8U"/>
                                             <constraint firstAttribute="width" constant="90" id="jOC-kp-wzx"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="PuR-ep-R2o"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -159,16 +186,6 @@
                                     <constraint firstItem="xbK-31-icW" firstAttribute="top" secondItem="89d-0Q-hhH" secondAttribute="bottom" constant="2.5" id="zaP-A3-Rgj"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fE-FQ-vM3">
-                                <rect key="frame" x="0.0" y="20" width="60" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="4U4-4b-76R"/>
-                                    <constraint firstAttribute="height" constant="50" id="BUL-yU-FSX"/>
-                                </constraints>
-                                <state key="normal" title="Logout">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.73553247580000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="o_X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcD-9s-01G">
                                 <rect key="frame" x="0.0" y="20" width="414" height="50"/>
                                 <constraints>
@@ -178,6 +195,19 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.73553247580000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fE-FQ-vM3">
+                                <rect key="frame" x="0.0" y="20" width="60" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="4U4-4b-76R"/>
+                                    <constraint firstAttribute="height" constant="50" id="BUL-yU-FSX"/>
+                                </constraints>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.73553247580000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="LogoutTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="g9v-tQ-aYI"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCe-wk-MKg">
                                 <rect key="frame" x="0.0" y="686" width="414" height="50"/>
                                 <constraints>
@@ -186,6 +216,9 @@
                                 <state key="normal" title="New Game">
                                     <color key="titleColor" red="1" green="0.0" blue="0.73553247580000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="NewGameTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="C2S-9J-KYk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -205,6 +238,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="LogoutButton" destination="8fE-FQ-vM3" id="TH5-Hh-gxq"/>
+                        <outlet property="NewGameButton" destination="pCe-wk-MKg" id="FQv-4v-BDg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkb-93-ruG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
