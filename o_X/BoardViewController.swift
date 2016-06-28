@@ -10,6 +10,10 @@ class BoardViewController: UIViewController {
     @IBOutlet weak var newGameButton: UIButton!
     // Create additional IBOutlets here.
     
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +25,8 @@ class BoardViewController: UIViewController {
     }
     
     // Create additional IBActions here.
+    
+    
 
 }
 
