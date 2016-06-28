@@ -6,7 +6,9 @@
 import UIKit
 
 class BoardViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var BoardView: UIView!
     
     @IBOutlet weak var LogoutButton: UIButton!
     

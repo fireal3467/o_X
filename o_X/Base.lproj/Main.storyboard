@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvK-pv-SmD" userLabel="GreenBackgroundView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvK-pv-SmD" userLabel="BoardView">
                                 <rect key="frame" x="0.0" y="70" width="414" height="616"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNU-S2-x0a" userLabel="Line1">
@@ -239,6 +239,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="BoardView" destination="XvK-pv-SmD" id="ob5-RB-ynj"/>
                         <outlet property="LogoutButton" destination="8fE-FQ-vM3" id="TH5-Hh-gxq"/>
                         <outlet property="NewGameButton" destination="pCe-wk-MKg" id="FQv-4v-BDg"/>
                     </connections>
