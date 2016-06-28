@@ -12,7 +12,7 @@ class BoardViewController: UIViewController {
     
     @IBOutlet weak var NewGameButton: UIButton!
     
-    
+    //no need for button IBOutlets
     
 
     
