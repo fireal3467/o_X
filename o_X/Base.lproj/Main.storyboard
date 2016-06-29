@@ -59,6 +59,10 @@
                                             <constraint firstAttribute="width" constant="90" id="DnR-RS-iY1"/>
                                             <constraint firstAttribute="height" constant="90" id="JlF-Lq-95u"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="EIZ-wt-ejz"/>
                                         </connections>
@@ -70,6 +74,10 @@
                                             <constraint firstAttribute="width" constant="90" id="1jA-xA-U3a"/>
                                             <constraint firstAttribute="height" constant="90" id="QoQ-4c-e1h"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="hla-y0-0JK"/>
                                         </connections>
@@ -81,6 +89,10 @@
                                             <constraint firstAttribute="height" constant="90" id="Kq0-0b-2Yi"/>
                                             <constraint firstAttribute="width" constant="90" id="bDj-A8-L5B"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="HBZ-cR-M3K"/>
                                         </connections>
@@ -92,6 +104,10 @@
                                             <constraint firstAttribute="height" constant="90" id="ASO-ZU-hXH"/>
                                             <constraint firstAttribute="width" constant="90" id="Ueb-4N-xLa"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="g3M-1W-8Fo"/>
                                         </connections>
@@ -103,6 +119,10 @@
                                             <constraint firstAttribute="width" constant="90" id="fIx-fK-UD3"/>
                                             <constraint firstAttribute="height" constant="90" id="ztn-5X-eoD"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="LrS-n5-LfA"/>
                                         </connections>
@@ -114,6 +134,10 @@
                                             <constraint firstAttribute="height" constant="90" id="BbN-fq-Jgx"/>
                                             <constraint firstAttribute="width" constant="90" id="SJt-yg-VwE"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="juh-7I-OhC"/>
                                         </connections>
@@ -125,6 +149,10 @@
                                             <constraint firstAttribute="height" constant="90" id="XeC-fp-nFN"/>
                                             <constraint firstAttribute="width" constant="90" id="Yu0-eW-Wrf"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="Pmq-ZX-zUp"/>
                                         </connections>
@@ -136,6 +164,10 @@
                                             <constraint firstAttribute="height" constant="90" id="dcO-Fz-l9q"/>
                                             <constraint firstAttribute="width" constant="90" id="qf3-yh-hmP"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="3yW-xG-tod"/>
                                         </connections>
@@ -147,6 +179,10 @@
                                             <constraint firstAttribute="height" constant="90" id="Cmb-Fo-M8U"/>
                                             <constraint firstAttribute="width" constant="90" id="jOC-kp-wzx"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="ButtonTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="PuR-ep-R2o"/>
                                         </connections>

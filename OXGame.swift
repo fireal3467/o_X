@@ -26,10 +26,10 @@ enum OXGameState:String {
 
 class OXGame {
     private var Board:[CellType] = [CellType](count: 9, repeatedValue: CellType.Empty)
-    private var startType:CellType = CellType.X
+    private let startType: CellType = CellType.X
     
-    var turn:Int = 0
-    var player:CellType = CellType.X
+    var turn: Int = 0
+    var player: CellType = .X
     
     
     func turnCount() -> Int {
@@ -41,6 +41,9 @@ class OXGame {
     }
     
     func playMove(location: Int) {
+        if(Board[location] == .Empty) {
+
+        print(String(location))
         Board[location] = whoseTurn()
         if(whoseTurn() == CellType.X) {
             player = CellType.O
@@ -48,35 +51,35 @@ class OXGame {
             player = CellType.X
         }
         turn += 1
+        }
     }
     
     func gameWon() -> Bool {
-        if (Board[0] == Board[1] && Board[1] == Board[2]) {
+        if (Board[0] == Board[1] && Board[1] == Board[2] && Board[2] != CellType.Empty) {
             //1
             return true
-        } else if (Board[3] == Board[4] && Board[4] == Board[5]){
+        } else if (Board[3] == Board[4] && Board[4] == Board[5] && Board[5] != CellType.Empty){
             //2
             return true
-        } else if (Board[6] == Board[7] && Board[7] == Board[8]){
+        } else if (Board[6] == Board[7] && Board[7] == Board[8] && Board[8] != CellType.Empty){
             //3
             return true
-        } else if (Board[0] == Board[3] && Board[3] == Board[6]){
+        } else if (Board[0] == Board[3] && Board[3] == Board[6] && Board[6] != CellType.Empty){
             //4
             return true
-        } else if (Board[1] == Board[4] && Board[4] == Board[7]){
+        } else if (Board[1] == Board[4] && Board[4] == Board[7] && Board[7] != CellType.Empty){
             //5
             return true
-        } else if (Board[2] == Board[5] && Board[5] == Board[8]){
+        } else if (Board[2] == Board[5] && Board[5] == Board[8] && Board[8] != CellType.Empty){
             //6
             return true
-        } else if (Board[0] == Board[4] && Board[4] == Board[8]){
+        } else if (Board[0] == Board[4] && Board[4] == Board[8] && Board[8] != CellType.Empty){
             //7
             return true
-        } else if (Board[2] == Board[4] && Board[4] == Board[6]){
+        } else if (Board[2] == Board[4] && Board[4] == Board[6] && Board[6] != CellType.Empty){
             //8
             return true
         } else{
-            
             return false
         }
     }
@@ -96,6 +99,7 @@ class OXGame {
     func reset() {
         turn = 0
         Board = [CellType](count: 9, repeatedValue: CellType.Empty)
+        player = startType
     }
 
 
