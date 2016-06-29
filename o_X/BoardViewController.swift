@@ -5,7 +5,11 @@
 
 import UIKit
 
+
 class BoardViewController: UIViewController {
+    
+    
+    var GamebObject:OXGame = OXGame() 
     
     
     @IBOutlet weak var BoardView: UIView!
@@ -23,6 +27,12 @@ class BoardViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
+   
+    
+    
+    
     
     @IBAction func LogoutTappedUp(sender: UIButton) {
         print("logOut tapped")
