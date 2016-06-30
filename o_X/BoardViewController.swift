@@ -58,6 +58,21 @@ class BoardViewController: UIViewController {
     }
     
     
+    
+    @IBAction func logoutButtonTapped(sender: UIButton) {
+        
+        UserController.sharedInstance.currentUser = nil
+        
+        let storyboard = UIStoryboard(name: "OnBoarding", bundle: nil)
+        let viewController = storyboard.instantiateInitialViewController()
+        let application = UIApplication.sharedApplication()
+        let window = application.keyWindow
+        window?.rootViewController = viewController
+        
+    }
+    
+    
+    
   
     @IBAction func ButtonTappedUp(sender: UIButton) {
         
