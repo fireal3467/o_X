@@ -58,7 +58,7 @@
                                         <rect key="frame" x="30" y="100" width="540" height="17"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyE-8m-8Lc" userLabel="PasswordUnderline">
                                         <rect key="frame" x="30" y="125" width="540" height="2"/>
@@ -84,22 +84,9 @@
                                     <constraint firstAttribute="trailing" secondItem="6mG-7m-c7q" secondAttribute="trailing" constant="30" id="vqU-NX-LGu"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2a-nK-dMm" userLabel="BackButton">
-                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="6k3-3O-0zX"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="8xa-cY-byd"/>
-                                    <constraint firstAttribute="width" constant="50" id="POX-hl-WFt"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Qra-9K-HKo"/>
-                                </constraints>
-                                <state key="normal" title="&lt; Back">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.73553247580000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="d2a-nK-dMm" firstAttribute="leading" secondItem="Nmp-6J-LwJ" secondAttribute="leading" id="Ewf-NM-79B"/>
                             <constraint firstAttribute="trailing" secondItem="QSc-7V-oQk" secondAttribute="trailing" id="GTz-AP-wtb"/>
                             <constraint firstItem="QSc-7V-oQk" firstAttribute="top" secondItem="tnw-Kh-8Mj" secondAttribute="bottom" constant="50" id="NRf-ff-8G3"/>
                             <constraint firstAttribute="trailing" secondItem="IDH-qC-8Om" secondAttribute="trailing" id="Odh-mz-os9"/>
@@ -108,7 +95,6 @@
                             <constraint firstAttribute="bottom" secondItem="QSc-7V-oQk" secondAttribute="bottom" constant="50" id="feg-Q7-WIB"/>
                             <constraint firstItem="Fys-S5-Pdr" firstAttribute="top" secondItem="jVI-BF-ser" secondAttribute="bottom" id="rPG-Qa-fXj"/>
                             <constraint firstItem="jVI-BF-ser" firstAttribute="leading" secondItem="Nmp-6J-LwJ" secondAttribute="leading" id="sqD-cl-aUt"/>
-                            <constraint firstItem="d2a-nK-dMm" firstAttribute="top" secondItem="tnw-Kh-8Mj" secondAttribute="bottom" id="uXP-0x-Yxt"/>
                             <constraint firstItem="IDH-qC-8Om" firstAttribute="leading" secondItem="Nmp-6J-LwJ" secondAttribute="leading" id="v7H-7B-1Tq"/>
                             <constraint firstItem="QSc-7V-oQk" firstAttribute="leading" secondItem="Nmp-6J-LwJ" secondAttribute="leading" id="y1g-Zr-dUg"/>
                         </constraints>
@@ -155,7 +141,7 @@
                                         <rect key="frame" x="30" y="100" width="540" height="17"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0HZ-g8-sAn" userLabel="PasswordUnderline">
                                         <rect key="frame" x="30" y="125" width="540" height="2"/>
@@ -202,16 +188,6 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.73553247580000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doq-lN-kak" userLabel="BackButton">
-                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1cb-X9-5S0"/>
-                                    <constraint firstAttribute="width" constant="50" id="Qtu-95-Rlh"/>
-                                </constraints>
-                                <state key="normal" title="&lt; Back">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.73553247580000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -223,9 +199,7 @@
                             <constraint firstItem="cza-In-qVZ" firstAttribute="leading" secondItem="vDN-U5-KBK" secondAttribute="leading" id="bDe-RK-qwt"/>
                             <constraint firstAttribute="trailing" secondItem="cza-In-qVZ" secondAttribute="trailing" id="d2r-W7-d07"/>
                             <constraint firstItem="AFV-EE-8M5" firstAttribute="centerX" secondItem="vDN-U5-KBK" secondAttribute="centerX" id="lgN-QC-dEp"/>
-                            <constraint firstItem="doq-lN-kak" firstAttribute="top" secondItem="Ak8-wB-uQB" secondAttribute="bottom" id="mjZ-5J-5M1"/>
                             <constraint firstAttribute="bottom" secondItem="Mjc-de-UUw" secondAttribute="bottom" constant="50" id="nJd-9k-yFf"/>
-                            <constraint firstItem="doq-lN-kak" firstAttribute="leading" secondItem="vDN-U5-KBK" secondAttribute="leading" id="sIE-hs-dyA"/>
                             <constraint firstAttribute="trailing" secondItem="Mjc-de-UUw" secondAttribute="trailing" id="wGl-Al-H7l"/>
                             <constraint firstItem="Mjc-de-UUw" firstAttribute="top" secondItem="Ak8-wB-uQB" secondAttribute="bottom" constant="50" id="zGg-tU-2qv"/>
                         </constraints>

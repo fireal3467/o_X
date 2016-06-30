@@ -30,12 +30,10 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func LoginButtonTapped(sender: UIButton) {
-        
-        
-        
+
         let loginClosure = {(user:User?, message:String?) in
             if let goodUser = user {
-                
+    
                 UserController.sharedInstance.currentUser = goodUser
             
             print("login successful")
@@ -47,6 +45,7 @@ class LoginViewController: UIViewController {
             window?.rootViewController = viewController
             
             } else if let errorMessage = message {
+                print("error message")
                 
                 let loginAlert = UIAlertController(title: "login failed", message: errorMessage, preferredStyle: UIAlertControllerStyle.Alert)
                 let loginAlertAction = UIAlertAction(title: "Dismiss", style: .Default, handler: nil)
@@ -55,8 +54,6 @@ class LoginViewController: UIViewController {
                 self.presentViewController(loginAlert, animated: true, completion: nil)
             }
         }
-        
-        
         
         UserController.sharedInstance.login(EmailTF.text!, password: passwordTF.text!, onCompletion: loginClosure)
     

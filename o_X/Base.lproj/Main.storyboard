@@ -241,8 +241,7 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.73553247580000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="LogoutTappedUp:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="g9v-tQ-aYI"/>
-                                    <action selector="logoutButtonTapped:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="KWp-8u-Ki8"/>
+                                    <action selector="LogoutButtonTapped:" destination="LJV-Ur-xoy" eventType="touchUpInside" id="1eA-1y-wmV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCe-wk-MKg">
