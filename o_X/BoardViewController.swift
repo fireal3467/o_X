@@ -48,9 +48,21 @@ class BoardViewController: UIViewController {
         
     }
     
+    
+    
+    
+    
     @IBAction func LogoutButtonTapped(sender: AnyObject) {
         
-        UserController.sharedInstance.currentUser = nil
+        
+        let logoutClosure = {(message:String?) in
+            //nothing for now TTYL
+            
+            
+        }
+        
+        
+        UserController.sharedInstance.logout(logoutClosure)
         
         let storyboard = UIStoryboard(name: "OnBoarding", bundle: nil)
         let viewController = storyboard.instantiateInitialViewController()

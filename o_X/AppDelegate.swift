@@ -10,9 +10,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        let preloadClosure = { (user: User? , message: String?) in
+            if let oldUser = user {
+                UserController.sharedInstance.allUsers.append(oldUser)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = storyboard.instantiateInitialViewController()
+                self.window?.rootViewController = viewController
+            }
+            else {
+                // do nothing
+            }
+        }
+        
+        
+     
+        if let email = defaults.stringForKey("currentUserEmail"){
+            if let password = defaults.stringForKey("currentUserPassword"){
+                print("entered preregisteration")
+                
+                UserController.sharedInstance.register(email, password: password, onCompletion: preloadClosure)
+
+            }
+        }
+        
+        
        
         return true
     }
