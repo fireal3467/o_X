@@ -19,6 +19,8 @@
 		4EF1B1A41D25A0C800947702 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF1B1A31D25A0C800947702 /* OnBoarding.storyboard */; };
 		4EF1B1A61D25A97400947702 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF1B1A51D25A97400947702 /* RegisterViewController.swift */; };
 		4EF1B1A81D25B62000947702 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF1B1A71D25B62000947702 /* LoginViewController.swift */; };
+		4EF1B2621D2A7FFD00947702 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF1B2611D2A7FFD00947702 /* SettingsViewController.swift */; };
+		4EF1B2641D2A922800947702 /* NetworkGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF1B2631D2A922800947702 /* NetworkGamesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		4EF1B1A31D25A0C800947702 /* OnBoarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		4EF1B1A51D25A97400947702 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4EF1B1A71D25B62000947702 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4EF1B2611D2A7FFD00947702 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4EF1B2631D2A922800947702 /* NetworkGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkGamesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				4EF1B1A11D25924400947702 /* UserController.swift */,
 				4EF1B1A51D25A97400947702 /* RegisterViewController.swift */,
 				4EF1B1A71D25B62000947702 /* LoginViewController.swift */,
+				4EF1B2611D2A7FFD00947702 /* SettingsViewController.swift */,
+				4EF1B2631D2A922800947702 /* NetworkGamesViewController.swift */,
 			);
 			path = o_X;
 			sourceTree = "<group>";
@@ -171,8 +177,10 @@
 				4E3E2A3F1D23CFBD0025CF63 /* OXGame.swift in Sources */,
 				4EF1B1A81D25B62000947702 /* LoginViewController.swift in Sources */,
 				4E3E2A481D2400860025CF63 /* OXGameController.swift in Sources */,
+				4EF1B2641D2A922800947702 /* NetworkGamesViewController.swift in Sources */,
 				4EF1B19E1D25913C00947702 /* User.swift in Sources */,
 				02F782C61D22966600E3BC29 /* AppDelegate.swift in Sources */,
+				4EF1B2621D2A7FFD00947702 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

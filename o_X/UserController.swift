@@ -41,10 +41,7 @@ class UserController {
         defaults.setObject(email, forKey: "currentUserEmail")
         defaults.setObject(password, forKey: "currentUserPassword")
         defaults.synchronize()
-        
-        print( defaults.objectForKey("currentUserEmail"))
-        print( defaults.objectForKey("currentUserPassword"))
-        
+         
         let newUser:User = User(emailString: email, passwordString: password)
         currentUser = newUser
         onCompletion(newUser,nil)

@@ -28,8 +28,71 @@ class OXGame {
     private var Board:[CellType] = [CellType](count: 9, repeatedValue: CellType.Empty)
     private let startType: CellType = CellType.X
     
+    
+    
+    
     var turn: Int = 0
-    var player: CellType = .X
+    var player: CellType = .O
+    
+    
+    init()  {
+        //we are simulating setting our board from the internet
+        let simulatedBoardStringFromNetwork = "o________" //update this string to different values to test your model serialisation
+        self.Board = deserialiseBoard(simulatedBoardStringFromNetwork) //your OXGame board model should get set here
+        if(simulatedBoardStringFromNetwork == serialiseBoard())    {
+            print("start\n------------------------------------")
+            print("congratulations, you successfully deserialised your board and serialized it again correctly. You can send your data model over the internet with this code. 1 step closer to network OX ;)")
+            
+            print("done\n------------------------------------")
+        }   else    {
+            print("start\n------------------------------------")
+            print ("your board deserialisation and serialization was not correct :( carry on coding on those functions")
+            
+            print("done\n------------------------------------")
+        }
+        
+    }
+    
+    
+    
+    
+    private func deserialiseBoard(board:String) -> [CellType] {
+        print("start deserialise")
+        var importedBoard:[CellType] = [CellType]()
+        for char in board.characters{
+            if char == "_" {
+                importedBoard.append(CellType.Empty)
+            } else if char == "x" {
+                importedBoard.append(CellType.X)
+            } else if char == "o" {
+                importedBoard.append(CellType.O)
+            } else {
+                print("error")
+            }
+        }
+        return importedBoard
+    }
+    
+    
+    private func serialiseBoard() -> String {
+        print("Start serialiseBoard")
+        var boardString:String = ""
+        for cell in Board {
+            if cell == CellType.Empty{
+                boardString += "_"
+            } else if cell == CellType.X {
+                boardString += "x"
+            } else if cell == CellType.O {
+                boardString += "o"
+            }
+        }
+        return boardString
+    }
+    
+    
+    func checkCell(location: Int) -> CellType {
+        return Board[location]
+    }
     
     
     func turnCount() -> Int {
