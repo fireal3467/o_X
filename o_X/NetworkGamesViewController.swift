@@ -19,15 +19,19 @@ class NetworkGamesViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "plusPush") {
-            let destination = segue.destinationViewController as? BoardViewController
-            destination?.networkPlay = true 
-        } else  if (segue.identifier == "openGame") {
-            let destination = segue.destinationViewController as? BoardViewController
-            destination?.networkPlay = true
+        if (segue.identifier == "OpenGame") {
+            if let destination = segue.destinationViewController as? BoardViewController{
+            destination.networkPlay = true
+            }
         }
     }
     
+    @IBAction func plusButton(sender: UIBarButtonItem) {
+        
+         performSegueWithIdentifier("OpenGame", sender: self)
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +81,7 @@ class NetworkGamesViewController: UITableViewController {
         
         print(String(indexPath.row))
         
-        performSegueWithIdentifier("openGame", sender: self)
+        performSegueWithIdentifier("OpenGame", sender: self)
     }
 
     /*

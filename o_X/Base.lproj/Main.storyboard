@@ -404,12 +404,12 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="I6K-nN-KDy">
                             <connections>
-                                <segue destination="Snw-Ma-mTb" kind="show" identifier="plusPush" id="iBm-Eo-mKl"/>
+                                <action selector="plusButton:" destination="aZC-oD-Me0" id="5xk-nU-C2x"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Snw-Ma-mTb" kind="show" identifier="openGame" id="tJE-Is-HSw"/>
+                        <segue destination="Snw-Ma-mTb" kind="show" identifier="OpenGame" id="TyA-dx-JeF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggf-PX-MvK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -692,7 +692,4 @@
             <point key="canvasLocation" x="2442" y="-628"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="tJE-Is-HSw"/>
-    </inferredMetricsTieBreakers>
 </document>
