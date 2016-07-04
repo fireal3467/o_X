@@ -17,6 +17,18 @@ class NetworkGamesViewController: UITableViewController {
     @IBAction func backButtonPressed(sender: UIBarButtonItem) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "plusPush") {
+            let destination = segue.destinationViewController as? BoardViewController
+            destination?.networkPlay = true 
+        } else  if (segue.identifier == "openGame") {
+            let destination = segue.destinationViewController as? BoardViewController
+            destination?.networkPlay = true
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,6 +61,7 @@ class NetworkGamesViewController: UITableViewController {
     }
 
     
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("networkGame", forIndexPath: indexPath)
 
@@ -61,7 +74,10 @@ class NetworkGamesViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
         print(String(indexPath.row))
+        
+        performSegueWithIdentifier("openGame", sender: self)
     }
 
     /*

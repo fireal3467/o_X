@@ -20,6 +20,8 @@ enum OXGameState:String {
     case InProgress = "InProgress"
     case Tie = "Tie"
     case Won = "Won"
+    case Open = "Open"
+    case Abandoned = "Abandoned"
     
 }
 

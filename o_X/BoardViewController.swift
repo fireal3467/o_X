@@ -17,6 +17,7 @@ class BoardViewController: UIViewController {
     @IBOutlet weak var NewGameButton: UIButton!
     
    
+    var networkPlay:Bool = false
     
     
     //no need for button IBOutlets
@@ -27,7 +28,12 @@ class BoardViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
         
+        if(networkPlay) {
+            
+        
+        } else {
         NewGameButton.hidden = true
+        }
         updateBoard()
         print("updated board")
         
@@ -69,8 +75,11 @@ class BoardViewController: UIViewController {
     @IBAction func NewGameTappedUp(sender: UIButton) {
         print("NewGameTappedUP")
         restartGame()
+        if(networkPlay){
+            
+        } else {
         NewGameButton.hidden = true
-        
+        }
     }
     
     
@@ -115,7 +124,11 @@ class BoardViewController: UIViewController {
                print(winner)
                let winAlert = UIAlertController(title: "Winner is " + winner!, message: "congradulations", preferredStyle: UIAlertControllerStyle.Alert)
                let dismissAlert: UIAlertAction = UIAlertAction(title: "Dismiss", style: .Default, handler:{(action) in
-                    self.NewGameButton.hidden = false
+                
+                    if(self.networkPlay){
+                    } else {
+                        self.NewGameButton.hidden = false
+                    }
                 })
                winAlert.addAction(dismissAlert)
                self.presentViewController(winAlert, animated: true , completion: nil)
@@ -124,8 +137,14 @@ class BoardViewController: UIViewController {
             case .Tie:
                 let tieAlert = UIAlertController(title: "Game Tie", message: "try again", preferredStyle: UIAlertControllerStyle.Alert)
                 let dismissAlert: UIAlertAction = UIAlertAction(title: "Dismiss", style: .Default, handler:{(action) in
-                    self.NewGameButton.hidden = false
-                    })
+                    
+                    
+                    if(self.networkPlay){
+                        
+                    } else {
+                       self.NewGameButton.hidden = false
+                    }
+                })
                 tieAlert.addAction(dismissAlert)
                 self.presentViewController(tieAlert, animated: true, completion: nil)
                 
@@ -133,7 +152,11 @@ class BoardViewController: UIViewController {
                 return
             case .InProgress:
                 print("game in progress")
+            default:
+                //do nothing 
+                break
             }
+            
             if (OXGameController.sharedInstance.AI){
                 print("in AI")
                 let moveAI:Int  = OXGameController.sharedInstance.playMoveAI()
@@ -152,7 +175,12 @@ class BoardViewController: UIViewController {
                 print(winner)
                 let winAlert = UIAlertController(title: "Winner is " + winner!, message: "congradulations", preferredStyle: UIAlertControllerStyle.Alert)
                 let dismissAlert: UIAlertAction = UIAlertAction(title: "Dismiss", style: .Default, handler:{(action) in
-                    self.NewGameButton.hidden = false
+                    if(self.networkPlay){
+                        
+                    } else {
+                        self.NewGameButton.hidden = false
+                    }
+
                 })
                 winAlert.addAction(dismissAlert)
                 self.presentViewController(winAlert, animated: true , completion: nil)
@@ -161,7 +189,16 @@ class BoardViewController: UIViewController {
             case .Tie:
                 let tieAlert = UIAlertController(title: "Game Tie", message: "try again", preferredStyle: UIAlertControllerStyle.Alert)
                 let dismissAlert: UIAlertAction = UIAlertAction(title: "Dismiss", style: .Default, handler:{(action) in
-                    self.NewGameButton.hidden = false
+                    
+                    
+
+                    
+                    if(self.networkPlay){
+                        
+                    } else {
+                        self.NewGameButton.hidden = true
+                    }
+                
                 })
                 tieAlert.addAction(dismissAlert)
                 self.presentViewController(tieAlert, animated: true, completion: nil)
@@ -170,6 +207,9 @@ class BoardViewController: UIViewController {
                 return
             case .InProgress:
                 print("game in progress")
+            default:
+                //do nothing
+                break
             }
             }
         }
