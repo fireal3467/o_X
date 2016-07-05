@@ -28,11 +28,12 @@ class BoardViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
         
+        
         if(networkPlay) {
             
         
         } else {
-        NewGameButton.hidden = true
+        NewGameButton.hidden = false
         }
         updateBoard()
         print("updated board")

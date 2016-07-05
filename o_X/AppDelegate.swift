@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -12,9 +13,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let defaults = NSUserDefaults.standardUserDefaults()
     
+   
+   
+    
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        
+        
+//        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
+//            .responseJSON { response in
+//                print(response.request)  // original URL request
+//                print(response.response) // URL response
+//                print(response.data)     // server data
+//                print(response.result)   // result of response serialization
+//                
+//                if let JSON = response.result.value {
+//                    print("JSON: \(JSON)")
+//                }
+//        }
+//        
         
         let preloadClosure = { (user: User? , message: String?) in
             if let oldUser = user {
@@ -34,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let password = defaults.stringForKey("currentUserPassword"){
                 print("entered preregisteration")
                 
-                UserController.sharedInstance.register(email, password: password, onCompletion: preloadClosure)
+                UserController.sharedInstance.login(email, password: password, onCompletion: preloadClosure)
 
             }
         }

@@ -12,8 +12,10 @@ import Foundation
 class User {
     var email:String
     var password:String
+    var token:String = ""
+    var client:String = ""
     
-    init(emailString:String, passwordString:String) {
+    init(emailString:String, passwordString:String, token:String, client:String) {
         email = emailString
         password = passwordString
     }
