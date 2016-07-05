@@ -9,7 +9,7 @@
 import Foundation
 
 
-class OXGameController {
+class OXGameController:WebService {
     
     static var sharedInstance = OXGameController()
     
@@ -19,12 +19,44 @@ class OXGameController {
     
     var AI: Bool = false
     
-    var ID:Int = 0
-    var Host:String  = ""
+    func getGames(onCompletion onCompletion:([OXGame]?,String?) -> Void) {
     
-    func getGames(onCompletion onCompletion:([OXGame?],String?) -> Void) {
-        onCompletion([],nil)
+        let request = createMutableRequest(NSURL(string:"https://ox-backend.herokuapp.com/games"), method: "GET", parameters: nil)
         
+        executeRequest(request, requestCompletionFunction: {(responseCode, json) in
+            
+            
+            print(json)
+            
+            
+            print(String(responseCode))
+            
+            
+            
+            if responseCode/100 == 2 {
+                
+                print("FDSAFDSA")
+                
+                var games = [OXGame]()
+                
+                for game in json.arrayValue {
+                    let g = OXGame()
+                    g.ID = game["id"].intValue
+                    g.host = game["host_user"]["uid"].stringValue
+                    games.append(g)
+                }
+                
+                onCompletion(games, nil)
+                
+            } else {
+                
+                
+                print("failed to get a game list")
+                
+                onCompletion(nil,"error, couldn't get 200 response code")
+            }
+
+            })
     }
     
     
@@ -56,6 +88,7 @@ class OXGameController {
             
         }
     }
+    
     
     
     

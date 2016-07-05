@@ -13,6 +13,33 @@ class NetworkGamesViewController: UITableViewController {
     
     var dummy:[String] = ["game1","game2","game3","game4"]
     
+    var gamesList:[OXGame] = []
+    
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        let makeGameList = {(games:[OXGame]?, message: String?) in
+            
+            if let games = games {
+                self.gamesList = games
+                self.tableView.reloadData()
+            } else {
+                // TODO: Handle with alertcontroller.
+                print(message)
+            }
+            
+        }
+        
+        
+        
+        OXGameController.sharedInstance.getGames(onCompletion: makeGameList)
+        
+    }
+    
+    
+    
+    
 
     @IBAction func backButtonPressed(sender: UIBarButtonItem) {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -60,7 +87,7 @@ class NetworkGamesViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return  dummy.count
+        return  gamesList.count
         
     }
 
@@ -70,7 +97,7 @@ class NetworkGamesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("networkGame", forIndexPath: indexPath)
 
         
-        cell.textLabel?.text = dummy[indexPath.row]
+        cell.textLabel?.text = "Game \(gamesList[indexPath.row].ID) @ \(gamesList[indexPath.row].host)"
         
 
         return cell

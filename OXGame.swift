@@ -31,7 +31,8 @@ class OXGame {
     private let startType: CellType = CellType.X
     
     
-    
+    var ID:Int = 0
+    var host: String = ""
     
     var turn: Int = 0
     var player: CellType = .O

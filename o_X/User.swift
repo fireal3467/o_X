@@ -18,6 +18,8 @@ class User {
     init(emailString:String, passwordString:String, token:String, client:String) {
         email = emailString
         password = passwordString
+        self.token = token
+        self.client = client
     }
     
 }

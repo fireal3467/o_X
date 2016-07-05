@@ -37,8 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        
         
         let preloadClosure = { (user: User? , message: String?) in
-            if let oldUser = user {
-                UserController.sharedInstance.allUsers.append(oldUser)
+            if user != nil {
+                //UserController.sharedInstance.allUsers.append(oldUser)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let viewController = storyboard.instantiateInitialViewController()
                 self.window?.rootViewController = viewController

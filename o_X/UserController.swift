@@ -108,8 +108,11 @@ class UserController: WebService {
         })
         
         //we are now done with the registerUser function. Note that this function doesnt return anything. But because of the viewControllerCompletionFunction closure we are given as an input parameter, we can set in motion a function in the calling class when it is needed.
-        
     }
+    
+    
+    
+    
     
     
     func login(email:String, password:String, onCompletion:(User?,String?) -> Void) {
@@ -126,16 +129,15 @@ class UserController: WebService {
         
         self.executeRequest(request, requestCompletionFunction: {(responseCode,json) in
             print(json)
-            var user:User = User(emailString: "", passwordString: "", token: "", client:"")
             
         
             
             if (responseCode/100 == 2) {
                 
-                user = User(emailString: json["data"]["email"].stringValue,
+                let user = User(emailString: json["data"]["email"].stringValue,
                     passwordString:"not_given_and_not_stored",
-                    token:json["data"]["token"].stringValue,
-                    client:json["data"]["client"].stringValue)
+                    token: json["data"]["token"].stringValue,
+                    client: json["data"]["client"].stringValue)
                 //while we at it, lets persist our user
                 self.defaults.setObject(email, forKey: "currentUserEmail")
                 self.defaults.setObject(password, forKey: "currentUserPassword")
