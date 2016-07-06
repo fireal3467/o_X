@@ -27,36 +27,26 @@ enum OXGameState:String {
 
 
 class OXGame {
-    private var Board:[CellType] = [CellType](count: 9, repeatedValue: CellType.Empty)
+    var Board:[CellType] = [CellType](count: 9, repeatedValue: CellType.Empty)
     private let startType: CellType = CellType.X
     
     
     var ID:Int = 0
     var host: String = ""
     
-    var turn: Int = 0
-    var player: CellType = .O
-    
-    
-    init()  {
-        //we are simulating setting our board from the internet
-        let simulatedBoardStringFromNetwork = "_________" //update this string to different values to test your model serialisation
-        self.Board = deserialiseBoard(simulatedBoardStringFromNetwork) //your OXGame board model should get set here
-        if(simulatedBoardStringFromNetwork == serialiseBoard())    {
-            print("start\n------------------------------------")
-            print("congratulations, you successfully deserialised your board and serialized it again correctly. You can send your data model over the internet with this code. 1 step closer to network OX ;)")
-            
-            print("done\n------------------------------------")
-        }   else    {
-            print("start\n------------------------------------")
-            print ("your board deserialisation and serialization was not correct :( carry on coding on those functions")
-            
-            print("done\n------------------------------------")
-        }
+   
+    func updateBoardNetwork(board:String) {
+        print("updating board Network Style")
+        self.Board = deserialiseBoard(board)
         
     }
     
     
+    func getNetworkBoard() -> String {
+        print("getting board to send to network")
+        
+        return serialiseBoard()
+    }
     
     
     private func deserialiseBoard(board:String) -> [CellType] {
@@ -99,11 +89,21 @@ class OXGame {
     
     
     func turnCount() -> Int {
-        return turn
+        var moves:Int = 0
+        for cell in Board {
+            if cell != .Empty{
+                moves += 1
+            }
+        }
+        return moves
     }
     
     func whoseTurn() -> CellType {
-        return player
+        if(turnCount()%2 == 0){
+            return CellType.X
+        } else {
+            return CellType.O
+        }
     }
     
     func playMove(location: Int) {
@@ -111,12 +111,6 @@ class OXGame {
 
         print(String(location))
         Board[location] = whoseTurn()
-        if(whoseTurn() == CellType.X) {
-            player = CellType.O
-        } else if(whoseTurn() == CellType.O) {
-            player = CellType.X
-        }
-        turn += 1
         }
     }
     
@@ -163,9 +157,8 @@ class OXGame {
     }
 
     func reset() {
-        turn = 0
         Board = [CellType](count: 9, repeatedValue: CellType.Empty)
-        player = startType
+        
     }
 
 

@@ -38,13 +38,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let preloadClosure = { (user: User? , message: String?) in
             if user != nil {
-                //UserController.sharedInstance.allUsers.append(oldUser)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let viewController = storyboard.instantiateInitialViewController()
                 self.window?.rootViewController = viewController
+                print("successful pregistration")
             }
             else {
                 // do nothing
+                print("failed preregistration")
             }
         }
         
@@ -56,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 UserController.sharedInstance.login(email, password: password, onCompletion: preloadClosure)
 
+                
             }
         }
         

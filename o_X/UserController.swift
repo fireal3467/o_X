@@ -55,6 +55,9 @@ class UserController: WebService {
     
     func register(email:String, password:String, onCompletion:(User?,String?) -> ()) {
         
+        
+        
+        
         let user = ["email":email,"password":password]
         
         //remember a request has 4 things:
@@ -72,6 +75,8 @@ class UserController: WebService {
             //responseCode is the response code from the server.
             //json is the response data received
             
+            print("register JSON")
+            
             print(json)
             var user:User = User(emailString: "", passwordString: "", token: "", client:"")
             
@@ -83,14 +88,17 @@ class UserController: WebService {
                     passwordString:"not_given_and_not_stored",
                     token:json["data"]["token"].stringValue,
                     client:json["data"]["client"].stringValue)
+                
+                
+                
                 //while we at it, lets persist our user
                 self.defaults.setObject(email, forKey: "currentUserEmail")
                 self.defaults.setObject(password, forKey: "currentUserPassword")
                 self.defaults.synchronize()
                 
                 //and while we still at it, lets set the user as logged in. This is good programming as we are keeping all the user management inside the UserController and handling it at the right time
-                self.currentUser = user
                 
+                self.currentUser = user
                 //Note that our registerUser function has 4 parameters: email, password, presentingViewController and requestCompletionFunction
                 //requestCompletionFunction is a closure for what is to happen in the ViewController when we are done with the webservice.
                 
@@ -115,6 +123,9 @@ class UserController: WebService {
     
     
     
+    
+    
+    
     func login(email:String, password:String, onCompletion:(User?,String?) -> Void) {
         
         let userToLogin = ["email":email,"password":password]
@@ -128,6 +139,9 @@ class UserController: WebService {
         
         
         self.executeRequest(request, requestCompletionFunction: {(responseCode,json) in
+            
+            print("login JSON")
+            
             print(json)
             
         
@@ -157,8 +171,12 @@ class UserController: WebService {
 
             
             }
+            
+            
         })
+        
     }
+    
     
     
 //    func login(email:String, password: String, onCompletion: (User?,String?) -> Void) {

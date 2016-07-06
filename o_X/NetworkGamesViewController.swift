@@ -40,8 +40,12 @@ class NetworkGamesViewController: UITableViewController {
     
     
     
+    
+    
+    
 
     @IBAction func backButtonPressed(sender: UIBarButtonItem) {
+        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -54,8 +58,32 @@ class NetworkGamesViewController: UITableViewController {
     }
     
     @IBAction func plusButton(sender: UIBarButtonItem) {
+        //TODO userccontroller host game
         
-         performSegueWithIdentifier("OpenGame", sender: self)
+        
+        let hostGameClosure = {(game:OXGame?, message:String?) -> Void in
+            
+            if let newGame = game {
+                print("success! you are now hosting a new game with ID: \(game!.ID)")
+                
+                //todo, make UI alert saying new game
+                
+                
+                OXGameController.sharedInstance.player = CellType.X
+                
+                self.performSegueWithIdentifier("OpenGame", sender: self)
+                
+            } else if let newMessage = message {
+                
+                //todo: make UI alert saying failed
+                
+                print(newMessage)
+                
+            }
+        }
+        
+        
+        OXGameController.sharedInstance.hostGame(hostGameClosure)
         
         
     }
@@ -103,12 +131,38 @@ class NetworkGamesViewController: UITableViewController {
         return cell
     }
     
-    
+    //TODO make UI alerts for everything 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         print(String(indexPath.row))
         
-        performSegueWithIdentifier("OpenGame", sender: self)
+        
+        let acceptGameClosure = {(game: OXGame?, message: String? ) in
+
+            
+            if let acceptedGame = game {
+                
+                print("success, you have accepted a game")
+                
+                
+                self.performSegueWithIdentifier("OpenGame", sender: self)
+                
+                
+            } else if let errorMessage = message {
+                
+                print(errorMessage)
+                
+            }
+            
+            
+            
+        
+        }
+        
+        
+        OXGameController.sharedInstance.acceptGame(gamesList[indexPath.row], onCompletion: acceptGameClosure)
+        
+        
     }
 
     /*
